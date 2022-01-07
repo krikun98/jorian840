@@ -1,30 +1,28 @@
-# Jorian
+# Jorian 840
 
-44-key 16-column wireless split keyboard in a 100x100 mm PCB
+44-key wireless split keyboard in a 100x100 mm PCB
 
 ## Disclaimer
 
 The keyboard layout is derived from [Jian layout](http://www.keyboard-layout-editor.com/#/gists/4b6c2af67148f58ddd6c6b2976c4370f) (just visually, there was no actual copying involved).
-There are multiple [issues](https://github.com/joric/jorian/wiki/Issues) in my version.
-Please buy Jian from its author, [/u/KgOfHedgehogs](http://reddit.com/u/KgOfHedgehogs), he's running a high quality commercial batch.
+Please buy Jian from its author, [/u/KgOfHedgehogs](http://reddit.com/u/KgOfHedgehogs) at [the official store](https://killswit.ch)
 
 ## Download
 
-You can download Gerber files and schematic in the [releases section](https://github.com/joric/jorian/releases).
+You can download Gerber files and schematic in the [releases section](https://github.com/krikun98/jorian_840/releases).
 
 ## Instructions
 
-Please refer to the public [Jorian wiki](https://github.com/joric/jorian/wiki).
+Please refer to the public [Jorian wiki](https://github.com/krikun98/jorian_840/wiki).
 
 ## Pictures
 
 ### Version 1.0
 
-![](images/jorian-1.0-assembled.jpg)
+MX Hotswap version
 
-![](images/jorian-1.0.jpg)
+![](images/pcb_hotswap)
 
-## References
+Regular version (MX/Alps/Omron B3G-S)
 
-* Reddit thread: https://www.reddit.com/r/MechanicalKeyboards/comments/aj0mos/jorian_christmas_edition
-* My nRF5x QMK fork: https://github.com/joric/qmk_firmware/commits/nrf52
+![](images/pcb_solder)

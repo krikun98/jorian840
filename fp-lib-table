@@ -1,4 +1,0 @@
-(fp_lib_table
-  (lib (name "kbd_jorian")(type "KiCad")(uri "${KIPRJMOD}/kbd.pretty")(options "")(descr ""))
-  (lib (name "skean")(type "KiCad")(uri "C:/Users/kriku/Keyboard_projects/skean/pcb/pinky/kicad/footprints/skean.pretty")(options "")(descr ""))
-)
