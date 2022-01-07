@@ -2,6 +2,9 @@
 
 container_cmd="docker run -v=$(pwd):/kikit -w=/kikit --rm"
 
+ mkdir -p gerbers
+ mkdir -p images
+
 for name in "pcb" "plate" "bottom"
 do
 	for option in "$name"/*/
@@ -14,6 +17,8 @@ do
 		${container_cmd} yaqwsx/kikit:nightly pcbdraw --style builtin:set-blue-enig.json "$file" images/"$name"_"$short_option".png >> /dev/null
 	done
 done
+
+mkdir -p dxf
 
 for name in "plate" "bottom"
 	do
