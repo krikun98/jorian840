@@ -90,10 +90,10 @@ jobs:
     strategy:
         matrix: ${{fromJson(needs.gerber_matrix.outputs.matrix)}}
     steps:
-     - uses: actions/download-artifact@master
-       with:
-         name: ${{ PROJECT_NAME }}_gerbers
-         path: gerbers
+      - uses: actions/download-artifact@master
+        with:
+          name: ${{ PROJECT_NAME }}_gerbers
+          path: gerbers
       - name: Gets latest created release info
         id: latest_release_info
         uses: jossef/action-latest-release-info@v1.1.0
@@ -116,10 +116,10 @@ jobs:
     strategy:
         matrix: ${{fromJson(needs.image_matrix.outputs.matrix)}}
     steps:
-     - uses: actions/download-artifact@master
-       with:
-         name: ${{ PROJECT_NAME }}_images
-         path: images
+      - uses: actions/download-artifact@master
+        with:
+          name: ${{ PROJECT_NAME }}_images
+          path: images
       - name: Gets latest created release info
         id: latest_release_info
         uses: jossef/action-latest-release-info@v1.1.0
@@ -140,10 +140,10 @@ jobs:
     name: Upload case DXF files
     needs: generate
     steps:
-     - uses: actions/download-artifact@master
-       with:
-         name: ${{ PROJECT_NAME }}_case_files
-         path: dxf
+      - uses: actions/download-artifact@master
+        with:
+          name: ${{ PROJECT_NAME }}_case_files
+          path: dxf
       - name: Gets latest created release info
         id: latest_release_info
         uses: jossef/action-latest-release-info@v1.1.0
