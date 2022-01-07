@@ -74,12 +74,12 @@ jobs:
           asset_path: ${{ matrix.filepath }}
           asset_name: ${{ matrix.filepath }}
           
-  upload_gerbers:
+  upload_images:
     runs-on: ubuntu-latest
-    name: Upload gerbers
-    needs: [generate, gerber_matrix]
+    name: Upload images
+    needs: [generate, image_matrix]
     strategy:
-        matrix: ${{fromJson(needs.gerber_matrix.outputs.matrix)}}
+        matrix: ${{fromJson(needs.image_matrix.outputs.matrix)}}
     steps:    
       - name: Gets latest created release info
         id: latest_release_info
