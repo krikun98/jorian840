@@ -2,6 +2,7 @@ on: [push, pull_request, workflow_dispatch]
 
 env:
   DOCKER_USER_OPTION: '$UID:$GID'
+  PROJECT_NAME: Jorian840
 
 name: Build
 jobs:
@@ -17,6 +18,22 @@ jobs:
             chmod +x build.sh
             ./build.sh
         shell: bash
+      - name: Persist gerbers
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ PROJECT_NAME }}_gerbers
+          path: gerbers
+      - name: Persist images
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ PROJECT_NAME }}_images
+          path: images
+      - name: Persist case files
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ PROJECT_NAME }}_case_files
+          path: dxf
+        
           
   image_matrix:
     runs-on: ubuntu-latest
@@ -25,6 +42,10 @@ jobs:
     outputs: 
         matrix: ${{ steps.setmatrix.outputs.matrix }}
     steps:
+     - uses: actions/download-artifact@master
+       with:
+         name: ${{ PROJECT_NAME }}_images
+         path: images
      - id: setmatrix
        run: |
          matrixArray=$(find ./images -name '*.png') # Creates array of all image files
@@ -45,6 +66,10 @@ jobs:
     outputs: 
         matrix: ${{ steps.setmatrix.outputs.matrix }}
     steps:
+     - uses: actions/download-artifact@master
+       with:
+         name: ${{ PROJECT_NAME }}_gerbers
+         path: gerbers
      - id: setmatrix
        run: |
          matrixArray=$(find ./gerbers -name '*.zip') # Creates array of all gerber files
@@ -64,7 +89,11 @@ jobs:
     needs: [generate, gerber_matrix]
     strategy:
         matrix: ${{fromJson(needs.gerber_matrix.outputs.matrix)}}
-    steps:    
+    steps:
+     - uses: actions/download-artifact@master
+       with:
+         name: ${{ PROJECT_NAME }}_gerbers
+         path: gerbers
       - name: Gets latest created release info
         id: latest_release_info
         uses: jossef/action-latest-release-info@v1.1.0
@@ -86,7 +115,11 @@ jobs:
     needs: [generate, image_matrix]
     strategy:
         matrix: ${{fromJson(needs.image_matrix.outputs.matrix)}}
-    steps:    
+    steps:
+     - uses: actions/download-artifact@master
+       with:
+         name: ${{ PROJECT_NAME }}_images
+         path: images
       - name: Gets latest created release info
         id: latest_release_info
         uses: jossef/action-latest-release-info@v1.1.0
@@ -106,7 +139,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Upload case DXF files
     needs: generate
-    steps:    
+    steps:
+     - uses: actions/download-artifact@master
+       with:
+         name: ${{ PROJECT_NAME }}_case_files
+         path: dxf
       - name: Gets latest created release info
         id: latest_release_info
         uses: jossef/action-latest-release-info@v1.1.0
