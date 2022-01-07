@@ -36,12 +36,15 @@ Just run the `build.sh` script.
 ### Version 1.0
 
 MX Hotswap version
+[IBOM](https://htmlpreview.github.io/?https://github.com/krikun98/jorian840/blob/holyiot/pcb/hotswap/bom/ibom.html)
 
 front|back
 --|--
 ![front](images/pcb_hotswap.png)|![back](images/pcb_hotswap_back.png)
 
+
 Regular version (MX/Alps/Omron B3G-S)
+[IBOM](https://htmlpreview.github.io/?https://github.com/krikun98/jorian840/blob/holyiot/pcb/solder/bom/ibom.html)
 
 front|back
 --|--
