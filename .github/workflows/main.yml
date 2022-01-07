@@ -51,7 +51,7 @@ jobs:
          # Start Generate JSON String
          echo "$matrixArray" | \
          jq --slurp --raw-input 'split("\n")[:-1] | map(split(" "))' | \
-         jq  "{\"filepath\": (.[][0]), \"basename\": .[][1] }" | \
+         jq  "map({\"filepath\": (.[0]), \"basename\": .[1] })" | \
          jq -sc "{ \"include\": . }" > tmp
          cat ./tmp
          # End Generate JSON String
@@ -75,7 +75,7 @@ jobs:
          # Start Generate JSON String
          echo "$matrixArray" | \
          jq --slurp --raw-input 'split("\n")[:-1] | map(split(" "))' | \
-         jq  "{\"filepath\": (.[][0]), \"basename\": .[][1] }" | \
+         jq  "map({\"filepath\": (.[0]), \"basename\": .[1] })" | \
          jq -sc "{ \"include\": . }" > tmp
          cat ./tmp
          # End Generate JSON String
