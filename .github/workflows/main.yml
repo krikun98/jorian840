@@ -3,7 +3,7 @@ on:
         paths-ignore:
           - '**/README.md'
           - '**/LICENSE'
-    pull:
+    pull_request:
         paths-ignore:
           - '**/README.md'
           - '**/LICENSE'
