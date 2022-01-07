@@ -9,8 +9,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run build script
-        run:
+        run:|
+            chmod +x build.sh
             ./build.sh
+        shell: bash
           
   image_matrix:
     runs-on: ubuntu-latest
