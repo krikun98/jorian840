@@ -1,4 +1,7 @@
 on: [push, pull_request, workflow_dispatch]
+    paths-ignore:
+      - '**/README.md'
+      - '**/LICENSE'
 
 env:
   DOCKER_USER_OPTION: '$UID:$GID'
