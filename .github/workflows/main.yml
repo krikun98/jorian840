@@ -36,7 +36,7 @@ jobs:
           
   image_matrix:
     runs-on: ubuntu-latest
-    name: Image matrix
+    name: PCB image matrix
     needs: generate
     outputs: 
         matrix: ${{ steps.setmatrix.outputs.matrix }}
@@ -47,11 +47,11 @@ jobs:
          path: images
      - id: setmatrix
        run: |
-         matrixArray=$(find ./images -name '*.png') # Creates array of all image files
+         matrixArray=$(find ./images -name 'pcb*.png' | xargs -n 1 -i echo {} {} | sed 's# .*/# #') # Creates array of all image files
          # Start Generate JSON String
          echo "$matrixArray" | \
-         jq --slurp --raw-input 'split("\n")[:-1]' | \
-         jq  "{\"filepath\": .[] }" | \
+         jq --slurp --raw-input 'split("\n")[:-1] | map(split(" "))' | \
+         jq  "{\"filepath\": (.[][0]), \"basename\": .[][1] }" | \
          jq -sc "{ \"include\": . }" > tmp
          cat ./tmp
          # End Generate JSON String
@@ -71,11 +71,11 @@ jobs:
          path: gerbers
      - id: setmatrix
        run: |
-         matrixArray=$(find ./gerbers -name '*.zip') # Creates array of all gerber files
+         matrixArray=$(find ./gerbers -name '*.zip' | xargs -n 1 -i echo {} {} | sed 's# .*/# #') # Creates array of all gerber files
          # Start Generate JSON String
          echo "$matrixArray" | \
-         jq --slurp --raw-input 'split("\n")[:-1]' | \
-         jq  "{\"filepath\": .[] }" | \
+         jq --slurp --raw-input 'split("\n")[:-1] | map(split(" "))' | \
+         jq  "{\"filepath\": (.[][0]), \"basename\": .[][1] }" | \
          jq -sc "{ \"include\": . }" > tmp
          cat ./tmp
          # End Generate JSON String
@@ -106,7 +106,7 @@ jobs:
           overwrite: true
           upload_url: ${{ steps.latest_release_info.outputs.upload_url }}
           asset_path: ${{ matrix.filepath }}
-          asset_name: ${{ matrix.filepath }}
+          asset_name: ${{ matrix.basename }}
           
   upload_images:
     runs-on: ubuntu-latest
@@ -132,7 +132,7 @@ jobs:
           overwrite: true
           upload_url: ${{ steps.latest_release_info.outputs.upload_url }}
           asset_path: ${{ matrix.filepath }}
-          asset_name: ${{ matrix.filepath }}
+          asset_name: ${{ matrix.basename }}
           
   upload_case_files:
     runs-on: ubuntu-latest
