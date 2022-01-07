@@ -52,7 +52,7 @@ jobs:
          echo "$matrixArray" | \
          jq --slurp --raw-input 'split("\n")[:-1] | map(split(" "))' | \
          jq  "map({\"filepath\": (.[0]), \"basename\": .[1] })" | \
-         jq -sc "{ \"include\": . }" > tmp
+         jq -sc "{ \"include\": .[] }" > tmp
          cat ./tmp
          # End Generate JSON String
          matrixStringifiedObject=$(cat ./tmp) # Use this as jq @sh wasn't cooperating
@@ -76,7 +76,7 @@ jobs:
          echo "$matrixArray" | \
          jq --slurp --raw-input 'split("\n")[:-1] | map(split(" "))' | \
          jq  "map({\"filepath\": (.[0]), \"basename\": .[1] })" | \
-         jq -sc "{ \"include\": . }" > tmp
+         jq -sc "{ \"include\": .[] }" > tmp
          cat ./tmp
          # End Generate JSON String
          matrixStringifiedObject=$(cat ./tmp) # Use this as jq @sh wasn't cooperating
