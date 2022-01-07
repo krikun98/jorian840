@@ -11,6 +11,14 @@ Plates and bottoms are to be cut from metal, acryllic or dual-layered plastic.
 The keyboard layout is derived from the [Jian layout](http://www.keyboard-layout-editor.com/#/gists/4b6c2af67148f58ddd6c6b2976c4370f) (just visually, there was no actual copying involved).
 Please buy the Jian from its author, [/u/KgOfHedgehogs](http://reddit.com/u/KgOfHedgehogs) at [the official store](https://killswit.ch)
 
+## Features
+
+* Wireless via Holyiot 18010 modules
+* Fully-featured ZMK split
+* Uses either 233350 310 mAh, LIR2032 40 mAh or CR2032 500 mAh (non-rechargeable) batteries
+* Charger on/off switch (for non-rechargeable batteries)
+* Can be built with 7 or 8 mm. standoffs even with the rechargeable battery under the PCB
+
 ## Download
 
 You can download Gerber files and schematic in the [releases section](https://github.com/krikun98/jorian840/releases).
