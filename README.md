@@ -36,6 +36,16 @@ For building the artifacts locally you need Docker.
 
 Just run the `build.sh` script.
 
+However, everything is built in Actions. 
+Check the Actions tab or releases for files not linked here.
+
+### Firmware
+
+The [bootloader](../../releases/latest/download/bootloader.hex) is available in the Releases tab.
+Please refer to the [nrfmicro wiki](https://github.com/joric/nrfmicro/wiki/bootloader) for the flashing instructions.
+
+[Default firmware](../../releases/latest/download/firmware.zip) files are also there, and you can use the [Jorian840](https://github.com/krikun98/zmk-config/tree/jorian840) `zmk-config` branch for customisation.
+
 ## Links
 
 ### Version 0.2
