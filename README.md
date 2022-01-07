@@ -39,15 +39,21 @@ MX Hotswap
 
 [IBOM](https://htmlpreview.github.io/?https://github.com/krikun98/jorian840/blob/holyiot/pcb/hotswap/bom/ibom.html)
 
+[gerbers](../../releases/latest/download/gerbers/pcb_hotswap_gerbers.zip)
+
 front|back
 --|--
-![front](images/pcb_hotswap.png)|![back](images/pcb_hotswap_back.png)
+![front](../../releases/latest/download/images/pcb_hotswap.png)|![back](../../releases/latest/download/images/pcb_hotswap_back.png)
 
 
 Solder (MX/Alps/Omron B3G-S)
 
 [IBOM](https://htmlpreview.github.io/?https://github.com/krikun98/jorian840/blob/holyiot/pcb/solder/bom/ibom.html)
 
+[gerbers](../../releases/latest/download/gerbers/pcb_solder_gerbers.zip)
+
 front|back
 --|--
-![front](images/pcb_solder.png)|![back](images/pcb_solder_back.png)
+![front](../../releases/latest/download/images/pcb_solder.png)|![back](../../releases/latest/download/images/pcb_solder_back.png)
+
+[Case files](../../releases/latest/download/case_files.zip) for all variations.
