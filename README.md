@@ -72,3 +72,6 @@ front|back
 ![front](../../releases/latest/download/pcb_solder.png)|![back](../../releases/latest/download/pcb_solder_back.png)
 
 [Case files](../../releases/latest/download/case_files.zip) for all variations.
+
+All the case files have the switch holes adjusted for laser cutting plastic (0.25 mm. smaller in both dimensions).
+If your laser cutter has different tolerances - adjust them and re-run the build script.
