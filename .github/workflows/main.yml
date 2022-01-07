@@ -7,7 +7,7 @@ on:
         paths-ignore:
           - '**/README.md'
           - '**/LICENSE'
-    workflow-dispatch:
+    workflow_dispatch:
         paths-ignore:
           - '**/README.md'
           - '**/LICENSE'
