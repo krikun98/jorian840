@@ -3,6 +3,7 @@
 container_cmd="docker run -v=$(pwd):/kikit -w=/kikit --rm"
 
 # Images
+echo "Drawing image files"
 mkdir -p images
 for name in "pcb" "plate" "bottom"
 do
@@ -16,6 +17,7 @@ do
 done
 
 # Gerbers
+echo "Generating gerbers"
 mkdir -p gerbers
 for name in "pcb"
 do
@@ -30,6 +32,7 @@ do
 done
 
 # Plate/bottom dxf files
+echo "Generating case DXF files"
 mkdir -p dxf
 for name in "plate" "bottom"
 do

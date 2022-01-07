@@ -8,7 +8,11 @@ Plates and bottoms are to be cut from metal, acryllic or dual-layered plastic.
 
 ## Disclaimer
 
-The keyboard layout is derived from the [Jian layout](http://www.keyboard-layout-editor.com/#/gists/4b6c2af67148f58ddd6c6b2976c4370f) (just visually, there was no actual copying involved).
+This is a modified version of Joric's Jorian.
+
+This release was not tested yet.
+
+The keyboard layout was derived from the [Jian layout](http://www.keyboard-layout-editor.com/#/gists/4b6c2af67148f58ddd6c6b2976c4370f) (just visually, there was no actual copying involved).
 Please buy the Jian from its author, [/u/KgOfHedgehogs](http://reddit.com/u/KgOfHedgehogs) at [the official store](https://killswit.ch)
 
 ## Features
