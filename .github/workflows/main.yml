@@ -2,7 +2,6 @@ on: [push, pull_request, workflow_dispatch]
 
 env:
   DOCKER_USER_OPTION: '$UID:$GID'
-  PROJECT_NAME: Jorian840
 
 name: Build
 jobs:
@@ -21,17 +20,17 @@ jobs:
       - name: Persist gerbers
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ PROJECT_NAME }}_gerbers
+          name: Jorian840_gerbers
           path: gerbers
       - name: Persist images
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ PROJECT_NAME }}_images
+          name: Jorian840_images
           path: images
       - name: Persist case files
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ PROJECT_NAME }}_case_files
+          name: Jorian840_case_files
           path: dxf
         
           
@@ -44,7 +43,7 @@ jobs:
     steps:
      - uses: actions/download-artifact@master
        with:
-         name: ${{ PROJECT_NAME }}_images
+         name: Jorian840_images
          path: images
      - id: setmatrix
        run: |
@@ -68,7 +67,7 @@ jobs:
     steps:
      - uses: actions/download-artifact@master
        with:
-         name: ${{ PROJECT_NAME }}_gerbers
+         name: Jorian840_gerbers
          path: gerbers
      - id: setmatrix
        run: |
@@ -92,7 +91,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@master
         with:
-          name: ${{ PROJECT_NAME }}_gerbers
+          name: Jorian840_gerbers
           path: gerbers
       - name: Gets latest created release info
         id: latest_release_info
@@ -118,7 +117,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@master
         with:
-          name: ${{ PROJECT_NAME }}_images
+          name: Jorian840_images
           path: images
       - name: Gets latest created release info
         id: latest_release_info
@@ -142,7 +141,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@master
         with:
-          name: ${{ PROJECT_NAME }}_case_files
+          name: Jorian840_case_files
           path: dxf
       - name: Gets latest created release info
         id: latest_release_info
