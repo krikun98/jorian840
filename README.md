@@ -22,6 +22,7 @@ Please buy the Jian from its author, [/u/KgOfHedgehogs](http://reddit.com/u/KgOf
 * Uses either 233350 310 mAh, LIR2032 40 mAh or CR2032 500 mAh (non-rechargeable) batteries
 * Charger on/off switch (for non-rechargeable batteries)
 * Proper case support
+* Adjustable pinky stagger in the solder version
 * Can be built with 7 or 8 mm. standoffs even with the rechargeable battery under the PCB
 
 ## Download
