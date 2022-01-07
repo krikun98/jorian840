@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Run build script
       - uses: xanantis/docker-file-ownership-fix@v1
+      - name: Run build script
         run: |
             chmod +x build.sh
             ./build.sh
