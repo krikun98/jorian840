@@ -13,11 +13,11 @@ Please buy the Jian from its author, [/u/KgOfHedgehogs](http://reddit.com/u/KgOf
 
 ## Download
 
-You can download Gerber files and schematic in the [releases section](https://github.com/krikun98/jorian_840/releases).
+You can download Gerber files and schematic in the [releases section](https://github.com/krikun98/jorian840/releases).
 
 ## Instructions
 
-Please refer to the public [Jorian wiki](https://github.com/krikun98/jorian_840/wiki).
+Please refer to the public [Jorian wiki](https://github.com/krikun98/jorian840/wiki).
 
 For building the artifacts locally you need Docker. 
 
