@@ -29,8 +29,12 @@ Just run the `build.sh` script.
 
 MX Hotswap version
 
-![](images/pcb_hotswap.png)
+front|back
+--|--
+![front](images/pcb_hotswap.png)|![back](images/pcb_hotswap_back.png)
 
 Regular version (MX/Alps/Omron B3G-S)
 
-![](images/pcb_solder.png)
+front|back
+--|--
+![front](images/pcb_solder.png)|![back](images/pcb_solder_back.png)
