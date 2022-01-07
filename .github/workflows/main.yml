@@ -1,5 +1,8 @@
 on: [push, pull_request, workflow_dispatch]
 
+env:
+  DOCKER_USER_OPTION: '$UID:$GID'
+
 name: Build
 jobs:
   generate:
@@ -9,6 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run build script
+      - uses: xanantis/docker-file-ownership-fix@v1
         run: |
             chmod +x build.sh
             ./build.sh
