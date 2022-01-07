@@ -31,11 +31,12 @@ For building the artifacts locally you need Docker.
 
 Just run the `build.sh` script.
 
-## Pictures
+## Links
 
-### Version 1.0
+### Version 0.2
 
-MX Hotswap version
+MX Hotswap 
+
 [IBOM](https://htmlpreview.github.io/?https://github.com/krikun98/jorian840/blob/holyiot/pcb/hotswap/bom/ibom.html)
 
 front|back
@@ -43,7 +44,8 @@ front|back
 ![front](images/pcb_hotswap.png)|![back](images/pcb_hotswap_back.png)
 
 
-Regular version (MX/Alps/Omron B3G-S)
+Solder (MX/Alps/Omron B3G-S)
+
 [IBOM](https://htmlpreview.github.io/?https://github.com/krikun98/jorian840/blob/holyiot/pcb/solder/bom/ibom.html)
 
 front|back
