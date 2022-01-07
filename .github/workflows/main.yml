@@ -1,9 +1,13 @@
 on: 
     push:
+        branches:
+          - holyiot
         paths-ignore:
           - '**/README.md'
           - '**/LICENSE'
     pull_request:
+        branches:
+          - holyiot
         paths-ignore:
           - '**/README.md'
           - '**/LICENSE'
