@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "kbd")(type "KiCad")(uri "${KIPRJMOD}/../../lib/kbd/kicad-footprints/kbd.pretty")(options "")(descr ""))
+  (lib (name "jorian")(type "KiCad")(uri "${KIPRJMOD}/../../lib/jorian/jorian.pretty")(options "")(descr ""))
+)

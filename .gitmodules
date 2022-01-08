@@ -1,0 +1,6 @@
+[submodule "lib/--force"]
+	path = lib/--force
+	url = https://github.com/krikun98/kbd.git
+[submodule "lib/kbd"]
+	path = lib/kbd
+	url = https://github.com/krikun98/kbd.git
