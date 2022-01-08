@@ -3,6 +3,7 @@
 *.bak
 *.bck
 *.kicad_pcb-bak
+*backups*
 *~
 _autosave-*
 *.tmp
@@ -12,7 +13,14 @@ _autosave-*
 fp-info-cache
 *-bak
 
+# Autorouter
+*topor*
+
 # Build artifacts
 gerbers/*
 dxf/*
 images/*
+
+# Unnecessary files
+plate/*/*.kicad_prl
+bottom/*/*.kicad_prl
