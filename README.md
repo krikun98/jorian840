@@ -19,7 +19,7 @@ Please buy the Jian from its author, [/u/KgOfHedgehogs](http://reddit.com/u/KgOf
 
 * Wireless via Holyiot 18010 modules
 * Fully-featured ZMK split
-* Uses either 233350 310 mAh, LIR2032 40 mAh or CR2032 500 mAh (non-rechargeable) batteries
+* Uses either 233350 310 mAh, LIR2032 40 mAh or CR2032 220 mAh (non-rechargeable) batteries
 * Charger on/off switch (for non-rechargeable batteries)
 * Proper case support
 * Adjustable pinky stagger in the solder version
