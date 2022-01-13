@@ -1,6 +1,10 @@
 {
   "board": {
+<<<<<<< Updated upstream
     "active_layer": 37,
+=======
+    "active_layer": 0,
+>>>>>>> Stashed changes
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_nets": [],
