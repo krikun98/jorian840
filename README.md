@@ -1,5 +1,7 @@
 # Jorian 840
 
+[![Jorian840 0.2](pictures/jorian840.jpg)](https://youtu.be/hZC1p5ErBT8 "Jorian840 0.2")
+
 44-key wireless split keyboard in a 100x100 mm PCB.
 
 Two main versions are available with plenty of supported switches.
