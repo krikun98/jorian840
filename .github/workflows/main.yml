@@ -26,7 +26,7 @@ jobs:
     name: Generate
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.5.2
       - uses: xanantis/docker-file-ownership-fix@v1
       - name: Run build script
         run: |
@@ -34,17 +34,17 @@ jobs:
             ./build.sh
         shell: bash
       - name: Persist gerbers
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: Jorian840_gerbers
           path: gerbers
       - name: Persist images
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: Jorian840_images
           path: images
       - name: Persist case files
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: Jorian840_case_files
           path: dxf
@@ -72,7 +72,7 @@ jobs:
          cat ./tmp
          # End Generate JSON String
          matrixStringifiedObject=$(cat ./tmp) # Use this as jq @sh wasn't cooperating
-         echo "::set-output name=matrix::$matrixStringifiedObject"
+         echo "matrix=$matrixStringifiedObject" >> $GITHUB_OUTPUT
     
   gerber_matrix:
     runs-on: ubuntu-latest
@@ -96,7 +96,7 @@ jobs:
          cat ./tmp
          # End Generate JSON String
          matrixStringifiedObject=$(cat ./tmp) # Use this as jq @sh wasn't cooperating
-         echo "::set-output name=matrix::$matrixStringifiedObject"
+         echo "matrix=$matrixStringifiedObject" >> $GITHUB_OUTPUT
     
   upload_gerbers:
     runs-on: ubuntu-latest
@@ -111,11 +111,11 @@ jobs:
           path: gerbers
       - name: Gets latest created release info
         id: latest_release_info
-        uses: jossef/action-latest-release-info@v1.1.0
+        uses: jossef/action-latest-release-info@v1.2.1
         env:
           GITHUB_TOKEN: ${{ github.token }}
       - name: Upload gerbers
-        uses: shogo82148/actions-upload-release-asset@v1
+        uses: shogo82148/actions-upload-release-asset@v1.6.4
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
@@ -137,11 +137,11 @@ jobs:
           path: images
       - name: Gets latest created release info
         id: latest_release_info
-        uses: jossef/action-latest-release-info@v1.1.0
+        uses: jossef/action-latest-release-info@v1.2.1
         env:
           GITHUB_TOKEN: ${{ github.token }}
       - name: Upload images
-        uses: shogo82148/actions-upload-release-asset@v1                
+        uses: shogo82148/actions-upload-release-asset@v1.6.4
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
@@ -161,11 +161,11 @@ jobs:
           path: dxf
       - name: Gets latest created release info
         id: latest_release_info
-        uses: jossef/action-latest-release-info@v1.1.0
+        uses: jossef/action-latest-release-info@v1.2.1
         env:
           GITHUB_TOKEN: ${{ github.token }}      
       - name: Upload case files
-        uses: shogo82148/actions-upload-release-asset@v1
+        uses: shogo82148/actions-upload-release-asset@v1.6.4
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
